@@ -1,0 +1,203 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(13, 176, 235, 0.1);
+    border: 5px solid teal;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 0 25px rgb(0, 128, 128);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #625959;
+    border-radius: 15px;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 18px;
+    background-color: #6dd285;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #21e94c;
+}
+
+.tabs {
+    margin-top: 20px;
+}
+
+.tab {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.tab h2 {
+    margin: 0;
+    padding: 10px;
+    background-color: #0b4b8f;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab h2:hover {
+    background-color: #78c9ee;
+    color: black;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.task-list.open {
+    max-height: 500px;
+}
+
+li {
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.bx {
+    cursor: pointer;
+    margin-left: 5px;
+    color: #dc3545;
+}
+
+.bx:hover {
+    color: #c82333;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.message {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    z-index: 1;
+}
+
+.message.show {
+    display: block;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#editTaskInput {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#saveTaskButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#saveTaskButton:hover {
+    background-color: #0056b3;
+}
